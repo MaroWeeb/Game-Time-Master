@@ -356,7 +356,13 @@
 				</div>
 				<div class="game-container-btns">
 					<button type="button" title="Hide this game server" class="btn btn-med" onclick="hideGameServerButton(this)">HIDE</button>
-					<button type="button" title="Delete this game server" class="btn btn-med" onclick="openDeleteCustomGameConfirm(this)">DELETE</button>
+					<div class="pos-relative">
+						<button type="button" title="Show more options" onclick="toggleGameServerOptions(this)"><img src="menu-icons/more-vert.png"></button>
+						<div class="game-options-menu hidden">
+							<a title="Request to add this game server to the official database" target="_blank"><img src="menu-icons/add.png" class="menu-icon">Request to add officially</a>
+							<a title="Delete this game server" href="#" onclick="openDeleteCustomGameConfirm(this)"><img src="menu-icons/delete.png" class="menu-icon">Delete this game server</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</template>

@@ -287,12 +287,21 @@ function createGameResults() {
 		const clone = template.content.cloneNode(true);
 
 		// Add game info.
-		// No icon and auto-fill needed for custom game servers.
+		// No icon needed for custom game servers.
 		if (!gameDataConverted[i].customGameServer) {
 			clone.querySelectorAll("img")[0].src = "game-icons/" + gameDataConverted[i].icon + ".gif";
 			// Generate auto-fill report links.
 			clone.querySelectorAll("a")[0].href = "https://docs.google.com/forms/d/e/1FAIpQLSclB9i8A3m0iQOXu7Yry3U6ZK8nZfQOOMFrXwTXrUozfUcyCg/viewform?usp=pp_url&entry.815976458=" + encodeURIComponent(gameDataConverted[i].game) + "&entry.1881636046=" + encodeURIComponent(gameDataConverted[i].server);
 			clone.querySelectorAll("a")[1].href = "https://docs.google.com/forms/d/e/1FAIpQLSdvjPjFsealB7KN4PbDZoYZhGqOXQqGttmkxIvFkTD-B33ZBA/viewform?entry.317697457=" + encodeURIComponent(gameDataConverted[i].game) + "&entry.1940755195=" + encodeURIComponent(gameDataConverted[i].server);
+		} else if(gameDataConverted[i].customGameServer) {
+			// Append "UTC" if needed.
+			let daylightSavings = "No",
+			utcDaily = "";
+			if (gameDataConverted[i].utcDailyReset) {
+				daylightSavings = "Yes";
+				utcDaily = " UTC";
+			}
+			clone.querySelectorAll("a")[0].href = "https://docs.google.com/forms/d/e/1FAIpQLSc0T_8Smk0vnp-VtR3eJSnSu3uLa3nFlWbCq9-jMqujmU1qcA/viewform?usp=pp_url&entry.349241820=" + encodeURIComponent(gameDataConverted[i].game) + "&entry.150389824=" + encodeURIComponent(gameDataConverted[i].server) + "&entry.848346057=" + encodeURIComponent(gameDataConverted[i].timezone) + "&entry.1014455634=" + encodeURIComponent(gameDataConverted[i].dailyReset) + encodeURIComponent(utcDaily) + "&entry.2027999370=" + encodeURIComponent(daylightSavings);
 		}
 		clone.querySelectorAll("h3")[0].textContent = gameDataConverted[i].game;
 		clone.querySelectorAll("h4")[0].textContent = gameDataConverted[i].server;
@@ -1432,7 +1441,7 @@ function closeCustomGameConfirm() {
 
 function openDeleteCustomGameConfirm(button) {
 	// Get game name and server region.
-	const gameHeader = button.parentElement.parentElement.children[0],
+	const gameHeader = button.parentElement.parentElement.parentElement.parentElement.children[0],
 	gameName = gameHeader.children[1].textContent,
 	server = gameHeader.children[2].textContent;
 
