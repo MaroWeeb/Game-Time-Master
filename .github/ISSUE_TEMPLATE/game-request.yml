@@ -23,7 +23,7 @@ body:
       description: "Examples: 'JST', 'GMT+9', 'UTC+9', 'Tokyo, Japan', 'Asia/Tokyo'."
       label: Server timezone (location or offset)
     validations:
-    required: true
+      required: true
   - type: input
     attributes:
       description: |
@@ -31,7 +31,7 @@ body:
         This can be the in the server's timezone (preferred), or your own. Whichever is easier for you. If using your own, also include the timezone. If timezone is not mentioned, I will assume it is using the game server's.
       label: Server daily reset time
     validations:
-    required: true
+      required: true
   - type: dropdown
     attributes:
       description: |
@@ -40,8 +40,8 @@ body:
       label: Does the server reset time change during the server's daylight savings?
       options: 
         - Unsure
-        - No
-        - Yes
+        - "No"
+        - "Yes"
   - type: textarea
     id: info_1
     attributes:

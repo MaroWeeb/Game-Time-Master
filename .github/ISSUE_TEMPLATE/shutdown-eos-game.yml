@@ -17,8 +17,8 @@ body:
     attributes:
       label: Has this game already shut down (as of today)?
       options: 
-        - Yes
-        - No
+        - "Yes"
+        - "No"
     validations:
       required: true
   - type: input
