@@ -1,0 +1,35 @@
+name: Shutdown/EoS game
+description: Report a game/server that has shut down / announced EoS.
+title: "Shutdown/EoS: GAME_NAME (SERVER/REGION)"
+labels: ["game data removal"]
+body:
+  - type: input
+    attributes:
+      label: Game name
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Server region/language
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Has this game already shut down (as of today)?
+      options: 
+        - Yes
+        - No
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: If "No" to above, what is the date of the shutdown/EoS?
+      placeholder: YYYY/MM/DD
+  - type: textarea
+    attributes:
+      description: Any additional info you want to add, such as link(s) to the EoS announcement.
+      label: Anything else?
+  - type: upload
+    attributes:
+      description: Any additional info you want to add, such as screenshots.
+      label: Anything else?

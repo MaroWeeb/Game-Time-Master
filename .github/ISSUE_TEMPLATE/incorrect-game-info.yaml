@@ -1,0 +1,46 @@
+name: Incorrect game info
+description: Report a game having incorrect information.
+title: "Data correction: GAME_NAME (SERVER/REGION)"
+labels: ["game data correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!NOTE]
+        > Are you reporting a game server being affected by daylight savings?
+        > For example, if the **SERVER** reset time is 05:00 during PST and changes to 06:00 during PDT.
+        > I.e. During the **SERVER'S** daylight savings, the server reset time changes.
+        > If yes, please make a daylight savings report instead - `Server reset time changes during server's daylight savings`.
+  - type: input
+    attributes:
+      label: Game name
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Server region/language
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "## Correct info"
+  - type: input
+    attributes:
+      description: If already correct, leave blank.
+      label: Timezone (location or offset)
+  - type: input
+    attributes:
+      description: If already correct, leave blank.
+      label: Server daily reset time
+  - type: markdown
+    attributes:
+      value: |
+        Please provide an explanation and/or links/screenshots as proof.
+  - type: textarea
+    attributes:
+      description: Any additional info you want to add.
+      label: Anything else?
+  - type: upload
+    attributes:
+      description: Any additional info you want to add, such as screenshots.
+      label: Anything else?
