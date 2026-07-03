@@ -26,12 +26,12 @@ body:
       label: If "No" to above, what is the date of the shutdown/EoS?
       placeholder: YYYY/MM/DD
   - type: textarea
+    id: info_1
     attributes:
       description: Any additional info you want to add, such as link(s) to the EoS announcement.
-      id: info_1
       label: Anything else?
   - type: upload
+    id: info_2
     attributes:
       description: Any additional info you want to add, such as screenshots.
-      id: info_2
       label: Anything else?

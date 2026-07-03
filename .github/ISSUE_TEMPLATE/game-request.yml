@@ -43,13 +43,13 @@ body:
         - No
         - Yes
   - type: textarea
+    id: info_1
     attributes:
       description: Any additional info you want to add.
-      id: info_1
       label: Anything else?
       placeholder: Optional
   - type: upload
+    id: info_2
     attributes:
       description: Any additional info you want to add, such as screenshots.
-      id: info_2
       label: Anything else?
