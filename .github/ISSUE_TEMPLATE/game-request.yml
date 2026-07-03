@@ -27,7 +27,7 @@ body:
   - type: input
     attributes:
       description: |
-        This is usually when you receive daily login rewards. If your game doesn't have login rewards, then this can be when daily missions/tasks/quests reset. 
+        This is usually when you receive daily login rewards. If your game doesn't have login rewards, then this can be when daily missions/tasks/quests reset.  
         This can be the in the server's timezone (preferred), or your own. Whichever is easier for you. If using your own, also include the timezone. If timezone is not mentioned, I will assume it is using the game server's.
       label: Server daily reset time
     validations:
@@ -35,7 +35,7 @@ body:
   - type: dropdown
     attributes:
       description: |
-        (Optional) This question is only applies if the server itself changes timezones during daylight savings. 
+        (Optional) This question is only applies if the server itself changes timezones during daylight savings.  
         For example, if the reset time is 05:00 during PST and also 05:00 during PDT, you would answer "No". If the reset time changed to 06:00 during PDT, you would answer "Yes".
       label: Does the server reset time change during the server's daylight savings?
       options: 
