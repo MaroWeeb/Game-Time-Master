@@ -1,0 +1,38 @@
+name: Bug report
+description: Report a bug.
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Describe the issue.
+      placeholder: What you expected to happen and what actually happened.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: Steps to reproduce the issue.
+      placeholder: |
+        1. Do this...
+        2. Then this...
+  - type: input
+    attributes:
+      label: What browser(s) are you seeing this happen on?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Error log
+      description: Please copy and paste the error log. This can be found at the bottom of the menu.
+      render: text
+  - type: textarea
+    attributes:
+      description: Any additional info you want to add.
+      label: Anything else?
+      placeholder: Optional
+  - type: upload
+    attributes:
+      description: Any additional info you want to add, such as screenshots.
+      label: Anything else?
