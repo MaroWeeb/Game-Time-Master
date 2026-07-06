@@ -2302,6 +2302,13 @@ var gameData = [
 		icon: "the-eminence-in-shadow-rpg"
 	},
 	{
+		game: "The First Descendant",
+		server: "Global",
+		timezone: "Etc/GMT+7",
+		dailyReset: "00:00",
+		icon: "the-first-descendant"
+	},
+	{
 		game: "THE iDOLM@STER CINDERELLA GIRLS: STARLIGHT STAGE",
 		server: "JP",
 		timezone: "Asia/Tokyo",
