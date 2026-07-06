@@ -685,6 +685,13 @@ var gameData = [
 		icon: "evertale"
 	},
 	{
+		game: "Evo Defense",
+		server: "EN",
+		timezone: "Etc/GMT+4",
+		dailyReset: "00:00",
+		icon: "evo-defense"
+	},
+	{
 		game: "Fate/Grand Order",
 		server: "JP",
 		timezone: "Asia/Tokyo",
