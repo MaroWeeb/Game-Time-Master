@@ -2304,9 +2304,10 @@ var gameData = [
 	{
 		game: "The First Descendant",
 		server: "Global",
-		timezone: "Etc/GMT+7",
-		dailyReset: "00:00",
-		icon: "the-first-descendant"
+		timezone: "America/Los_Angeles",
+		dailyReset: "07:00",
+		icon: "the-first-descendant",
+		utcDailyReset: true
 	},
 	{
 		game: "THE iDOLM@STER CINDERELLA GIRLS: STARLIGHT STAGE",
