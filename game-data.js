@@ -2474,6 +2474,13 @@ var gameData = [
 		icon: "ulala-idle-adventure"
 	},
 	{
+		game: "Ultraman: Legend of Heroes",
+		server: "Global",
+		timezone: "Asia/Shanghai",
+		dailyReset: "00:00",
+		icon: "ultraman-legend-of-heroes"
+	},
+	{
 		game: "Umamusume: Pretty Derby",
 		server: "JP",
 		timezone: "Asia/Tokyo",
